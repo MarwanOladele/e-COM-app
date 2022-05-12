@@ -1,8 +1,8 @@
-import React from "react";
-
+import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import img1 from "../Images/img1.png";
+import { slideData } from "../data";
+// import img1 from "../Images/img1.png";
 
 const Container = styled.div`
   width: 100%;
@@ -25,11 +25,14 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transition: all 0.5s ease;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -70,8 +73,13 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
-      
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
   };
 
   return (
@@ -79,43 +87,22 @@ const Slider = () => {
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <AiOutlineArrowLeft />
       </Arrow>
-      <Wrapper>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src={img1} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImgContainer>
-            <Image src={img1} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>WINTER SALE</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="orange">
-          <ImgContainer>
-            <Image src={img1} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>POPULAR SAL</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {slideData.map((item) => {
+          const { img, id, title, desc, bg } = item;
+          return (
+            <Slide key={id} bg={bg}>
+              <ImgContainer>
+                <Image src={img} />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{title}</Title>
+                <Desc>{desc}</Desc>
+                <Button>SHOP NOW</Button>
+              </InfoContainer>
+            </Slide>
+          );
+        })}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <AiOutlineArrowRight />
