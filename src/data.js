@@ -45,34 +45,34 @@ export const categoriesData = [
 export const productData = [
   {
     id: 1,
-    img: "https://w7.pngwing.com/pngs/826/253/png-transparent-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-cloth-thumbnail.png",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 4,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 5,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 6,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 7,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
   {
     id: 8,
-    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+    img: "https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png",
   },
 ];
