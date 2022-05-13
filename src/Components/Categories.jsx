@@ -3,17 +3,18 @@ import { categoriesData } from "../data";
 import styled from "styled-components";
 import CategoryItem from "./CategoryItem";
 
-
 const Container = styled.div`
   display: flex;
   padding 20px;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-const Categories = ({item}) => {
+const Categories = () => {
   return (
     <Container>
       {categoriesData.map((item) => {
-        <CategoryItem item={item} />;
+        return <CategoryItem key={item.id} {...item} />;
       })}
     </Container>
   );

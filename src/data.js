@@ -41,3 +41,38 @@ export const categoriesData = [
     title: "BAG!",
   },
 ];
+
+export const productData = [
+  {
+    id: 1,
+    img: "https://w7.pngwing.com/pngs/826/253/png-transparent-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-cloth-thumbnail.png",
+  },
+  {
+    id: 2,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 3,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 4,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 5,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 6,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 7,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+  {
+    id: 8,
+    img: "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg",
+  },
+];
