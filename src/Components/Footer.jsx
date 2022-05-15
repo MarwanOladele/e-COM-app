@@ -110,16 +110,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          {" "}
           <FaMapMarkerAlt style={{ marginRight: "10px" }} /> 26, Adebare Adeyemo
           Avenue, Akesan Lagos
         </ContactItem>
         <ContactItem>
-          {" "}
           <AiFillPhone style={{ marginRight: "10px" }} /> +234 705 857 3243
         </ContactItem>
         <ContactItem>
-          {" "}
           <AiFillMail style={{ marginRight: "10px" }} /> oladelemarwan@gmail.com
         </ContactItem>
       </Right>
