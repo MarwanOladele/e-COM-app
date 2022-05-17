@@ -3,8 +3,13 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vw;
-  background: url("https://images.pexels.com/photos/410487/pexels-photo-410487.jpeg);
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?cs=srgb&dl=pexels-moose-photos-1036623.jpg&fm=jpg")
+      no-repeat center / cover;
 `;
 const Wrapper = styled.div``;
 const Form = styled.form``;
