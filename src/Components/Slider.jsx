@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import { slideData } from "../data";
+import { mobile } from "../responsive";
 // import img1 from "../Images/img1.png";
 
 const Container = styled.div`
@@ -10,6 +11,9 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const Arrow = styled.div`

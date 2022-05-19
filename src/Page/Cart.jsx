@@ -47,6 +47,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -81,7 +82,7 @@ const PriceDetail = styled.div`
 const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 `;
 const ProductAmount = styled.div`
   font-size: 24px;
@@ -92,9 +93,37 @@ const ProductPrice = styled.div`
   font-weight: 200;
 `;
 
+const Hr = styled.hr`
+  background-color: #eee;
+  border: none;
+  height: 1px;
+`;
+
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 20px;
+  padding: 20px;
+  height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+  font-weight: 200;
+`;
+const SummaryItem = styled.div`
+  margin: 30px 0px;
   display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
+`;
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
 `;
 
 const Cart = () => {
@@ -139,8 +168,55 @@ const Cart = () => {
                 <ProductPrice>$ 30</ProductPrice>
               </PriceDetail>
             </Product>
+
+            <Hr />
+
+            <Product>
+              <ProductDetail>
+                <Image src="https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-create-shirt-product-mockups-with-gimp-logos-nick-8.png" />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> MARWAN OLADELE SHIRT
+                  </ProductName>
+                  <ProductId>
+                    <b>ID:</b> 346375638746
+                  </ProductId>
+                  <ProductColor color="black" />
+                  <ProductSize>
+                    <b>Size:</b> 37.5
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <GrAdd />
+                  <ProductAmount>2</ProductAmount>
+                  <MdOutlineRemove />
+                </ProductAmountContainer>
+                <ProductPrice>$ 30</ProductPrice>
+              </PriceDetail>
+            </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemPrice>$ 80</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>$ 8.9</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>$ -8.9</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <SummaryItemText>Total</SummaryItemText>
+              <SummaryItemPrice>$ 80</SummaryItemPrice>
+            </SummaryItem>
+            <Button>CHECKOUT NOW</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
