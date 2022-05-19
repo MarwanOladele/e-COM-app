@@ -7,7 +7,7 @@ import Login from "./Page/Login";
 import Cart from "./Page/Cart";
 
 function App() {
-  return <Login />;
+  return <Cart />;
 }
 
 export default App;

@@ -5,10 +5,14 @@ import styled from "styled-components";
 import Announcement from "../Components/Announcement";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({
+    padding: "20px",
+  })}
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -31,7 +35,11 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({
+    display: "none",
+  })}
+`;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
@@ -40,6 +48,9 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 const Info = styled.div`
   flex: 3;
@@ -48,6 +59,10 @@ const Product = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  ${mobile({
+    flexDirection: "column",
+    padding: "0px",
+  })}
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -61,6 +76,9 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  ${mobile({
+    padding: "0px",
+  })}
 `;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
