@@ -5,9 +5,10 @@ import Product from "./Page/Product";
 import Register from "./Page/Register";
 import Login from "./Page/Login";
 import Cart from "./Page/Cart";
+import Navbar from "./Components/Navbar";
 
 function App() {
-  return <Cart />;
+  return <Home />;
 }
 
 export default App;

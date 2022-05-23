@@ -60,7 +60,7 @@ const Logo = styled.h1`
   font-weight: bold;
   ${mobile({
     fontSize: "24px",
-    marginLeft: '5px'
+    marginLeft: "5px",
   })}
 `;
 
