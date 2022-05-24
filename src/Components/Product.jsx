@@ -66,7 +66,7 @@ const Product = ({ id, img }) => {
           <AiOutlineShoppingCart />
         </Icon>
         <Icon>
-          <AiOutlineSearch />
+           <AiOutlineSearch />
         </Icon>
         <Icon>
           <AiOutlineHeart />

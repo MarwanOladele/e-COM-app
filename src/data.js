@@ -29,16 +29,19 @@ export const categoriesData = [
     id: 1,
     img: "https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg",
     title: "SHIRT STYLE!",
+    cat: "women",
   },
   {
     id: 2,
     img: "https://images.pexels.com/photos/1860160/pexels-photo-1860160.jpeg",
     title: "TEDDY BEAR!",
+    cat: "coat",
   },
   {
     id: 3,
     img: "https://images.pexels.com/photos/4068314/pexels-photo-4068314.jpeg",
     title: "BAG!",
+    cat: "jeans",
   },
 ];
 
