@@ -50,7 +50,7 @@ const ProductList = () => {
   const location = useLocation();
   const cat = location.pathname.split("/")[2];
   const [filter, setFilter] = useState({});
-  const [sort, setSort] = useState('Newest');
+  const [sort, setSort] = useState("Newest");
 
   const handleFilters = (e) => {
     const value = e.target.value;
@@ -59,7 +59,6 @@ const ProductList = () => {
       [e.target.name]: value,
     });
   };
-  console.log(filter);
 
   return (
     <Container>
@@ -87,14 +86,14 @@ const ProductList = () => {
         </Filter>
         <Filter>
           <FilterText>Sort Products:</FilterText>
-          <Select>
-            <Option selected>Newest</Option>
-            <Option>Price (asc)</Option>
-            <Option>Price (desc)</Option>
+          <Select onChange={(e) => setSort(e.target.value)}>
+            <Option value="Newest">Newest</Option>
+            <Option value="asc">Price (asc)</Option>
+            <Option value="desc">Price (desc)</Option>
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      <Products {...cat} {...filter} {...sort}/>
       <Newsletter />
       <Footer />
     </Container>

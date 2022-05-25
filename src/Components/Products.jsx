@@ -4,14 +4,16 @@ import { productData } from "../data";
 import Product from "./Product";
 
 const Container = styled.div`
-padding: 20px;
-display: flex;
-flex-wrap: wrap;
-//   padding 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  //   padding 20px;
   justify-content: space-between;
-//   align-items: center;`;
+  //   align-items: center;
+`;
 
-const Products = () => {
+const Products = ({ cat, filter, sort }) => {
+  console.log(cat, sort, filter);
   return (
     <Container>
       {productData.map((item) => {
