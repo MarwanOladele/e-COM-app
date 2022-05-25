@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "../Components/Navbar";
 import Announcement from "../Components/Announcement";
@@ -6,6 +6,7 @@ import Products from "../Components/Products";
 import Newsletter from "../Components/Newsletter";
 import Footer from "../Components/Footer";
 import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const Container = styled.div``;
 
@@ -46,6 +47,20 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
+  const location = useLocation();
+  const cat = location.pathname.split("/")[2];
+  const [filter, setFilter] = useState({});
+  const [sort, setSort] = useState('Newest');
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilter({
+      ...filter,
+      [e.target.name]: value,
+    });
+  };
+  console.log(filter);
+
   return (
     <Container>
       <Announcement />
@@ -54,10 +69,8 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Product:</FilterText>
-          <Select>
-            <Option disabled selected>
-              Color
-            </Option>
+          <Select name="color" onChange={handleFilters}>
+            <Option disabled>Color</Option>
             <Option>White</Option>
             <Option>BLack</Option>
             <Option>Blue</Option>
@@ -65,7 +78,7 @@ const ProductList = () => {
             <Option>Green</Option>
             <Option>Red</Option>
           </Select>
-          <Select>
+          <Select name="size" onChange={handleFilters}>
             <Option selected>Size</Option>
             <Option>small</Option>
             <Option>medium</Option>
