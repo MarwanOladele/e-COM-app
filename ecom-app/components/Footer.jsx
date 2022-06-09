@@ -1,16 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import { urlFor } from "../lib/client";
+import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="footer-banner-container">
-      <div className="banner-desc">
-        <div className="left"></div>
-        <div className="right"></div>
-      </div>
-    </div>
-  );
-};
+    <div>Footer</div>
+  )
+}
 
-export default Footer;
+export default Footer
