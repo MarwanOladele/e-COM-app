@@ -7,6 +7,7 @@ import {
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
+import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -26,7 +27,9 @@ const ProductDetails = ({ product, products }) => {
             {image?.map((item, i) => (
               <img
                 src={urlFor(item)}
-                className={i === index ? 'small-image selected-image' : 'small-image'}
+                className={
+                  i === index ? "small-image selected-image" : "small-image"
+                }
                 onMouseOver={() => setIndex(i)}
               />
             ))}
