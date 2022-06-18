@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 
 const Context = createContext();
 
-export const stateContext = ({ children }) => {
+export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState();
   const [totalPrice, setTotalPrice] = useState();
@@ -11,13 +11,14 @@ export const stateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   const incQty = () => {
-    setQty((prevQty) => prevQty + 1);
+    setQty(qty + 1);
   };
   const decQty = () => {
-    setQty((prevQty) => {
-      if (prevQty - 1 < 1) return 1;
-
-      return prevQty - 1;
+    setQty((qty) => {
+      if (qty - 1 < 1) {
+        return 1;
+      }
+      return qty - 1;
     });
   };
 
