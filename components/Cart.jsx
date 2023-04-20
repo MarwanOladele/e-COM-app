@@ -15,10 +15,19 @@ import { urlFor } from "../lib/client";
 import { publicKey } from "../publicKey";
 
 const Cart = () => {
-  
+  const {
+    onRemove,
+    totalPrice,
+    totalQuantities,
+    cartItems,
+    setShowCart,
+    toggleCartItemsQuantity,
+    showPaystack,
+    setShowPaystack,
+  } = useStateContext();
 
   const publicKey = "pk_test_32df3e97ce5bdea2f3dc445ae63fd50856da5dd6";
-  const amount = 1000000; // Remember, set in kobo!
+  const amount = (totalPrice * 750 * 100); // Remember, set in kobo!
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -36,16 +45,7 @@ const Cart = () => {
       alert("Thanks for doing business with us! Come back soon!!"),
     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   };
-  const {
-    onRemove,
-    totalPrice,
-    totalQuantities,
-    cartItems,
-    setShowCart,
-    toggleCartItemsQuantity,
-    showPaystack,
-    setShowPaystack,
-  } = useStateContext();
+
   return (
     <div className="cart-wrapper" ref={cartRef}>
       {/* stack payment toggle */}
@@ -82,7 +82,10 @@ const Cart = () => {
                 />
               </div>
               <div className="">
-                <PaystackButton className="paystack-button" {...componentProps}/>
+                <PaystackButton
+                  className="paystack-button"
+                  {...componentProps}
+                />
                 <button
                   className="paystack-close"
                   onClick={() => {
